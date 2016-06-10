@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PhPract.core.math;
 
 namespace PhPract
 {
@@ -11,6 +12,8 @@ namespace PhPract
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private SpriteFont _font;
+        private Vector _resVec;
 
         public Game1()
         {
@@ -27,6 +30,10 @@ namespace PhPract
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            var vec1 = new Vector(1, 1);
+            var vec2 = new Vector(2, 2);
+
+            _resVec = vec1 + vec2;
 
             base.Initialize();
         }
@@ -41,6 +48,7 @@ namespace PhPract
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            _font = Content.Load<SpriteFont>("Test");
         }
 
         /// <summary>
@@ -76,6 +84,12 @@ namespace PhPract
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            spriteBatch.DrawString(_font, "vector: x=" + _resVec.X + ", y=" + _resVec.Y,
+                new Vector2(100, 100), Color.Black);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
