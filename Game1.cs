@@ -33,7 +33,8 @@ namespace PhPract
             var vec1 = new Vector(1, 1);
             var vec2 = new Vector(2, 2);
 
-            _resVec = vec1 + vec2;
+            _resVec = new Vector(2, 2);
+            _resVec += vec1;
 
             base.Initialize();
         }
