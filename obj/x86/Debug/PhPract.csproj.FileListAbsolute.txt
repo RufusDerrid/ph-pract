@@ -24,3 +24,5 @@ C:\Users\DOKolodko\Documents\Visual Studio 2015\Projects\PhPractRep\bin\Windows\
 C:\Users\DOKolodko\Documents\Visual Studio 2015\Projects\PhPractRep\obj\x86\Debug\PhPract.csprojResolveAssemblyReference.cache
 C:\Users\DOKolodko\Documents\Visual Studio 2015\Projects\PhPractRep\obj\x86\Debug\PhPract.exe
 C:\Users\DOKolodko\Documents\Visual Studio 2015\Projects\PhPractRep\obj\x86\Debug\PhPract.pdb
+D:\Projects\C#\ph-pract\obj\x86\Debug\PhPract.exe
+D:\Projects\C#\ph-pract\obj\x86\Debug\PhPract.pdb
