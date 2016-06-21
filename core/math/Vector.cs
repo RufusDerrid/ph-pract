@@ -47,24 +47,39 @@ namespace PhPract.core.math
             Y = -Y;
         }
 
-        public static Vector operator +(Vector vec1, Vector vec2)
+        public static Vector operator +(Vector u, Vector v)
         {
-            return new Vector(vec1.X + vec2.X, vec1.Y + vec2.Y);
+            return new Vector(u.X + v.X, u.Y + v.Y);
         }
 
-        public static Vector operator -(Vector vec1, Vector vec2)
+        public static Vector operator -(Vector u, Vector v)
         {
-            return new Vector(vec1.X - vec2.X, vec1.Y - vec2.Y);
+            return new Vector(u.X - v.X, u.Y - v.Y);
         }
 
-        public static Vector operator *(Vector vec1, float s)
+        public static Vector operator *(Vector u, float s)
         {
-            return new Vector(vec1.X * s, vec1.Y * s);
+            return new Vector(u.X * s, u.Y * s);
         }
 
-        public static Vector operator /(Vector vec1, float s)
+        public static Vector operator *(float s, Vector u)
         {
-            return new Vector(vec1.X / s, vec1.Y / s);
+            return new Vector(u.X * s, u.Y * s);
+        }
+
+        public static Vector operator /(Vector u, float s)
+        {
+            return new Vector(u.X / s, u.Y / s);
+        }
+
+        public static float operator ^(Vector u, Vector v)
+        {
+            return u.X * v.Y - u.Y * v.X;
+        }
+
+        public static float operator *(Vector u, Vector v)
+        {
+            return u.X * v.X + u.Y * v.Y;
         }
     }
 }
